@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @developer.name %>
+</p>
+<h3>Educations</h3>
+<% @developer.educations.each do |education| -%>
+  <p>
+  <strong>University:</strong>
+  <%= education.university %>
+</p>
+<p>
+<strong>Grade:</strong>
+<%= education.grade %>
+</p>
+<% end -%>
+
+<%= link_to 'Back', developers_path %>

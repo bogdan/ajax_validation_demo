@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  developer_id: 1
+  university: MyString
+  grade: MyString
+
+two:
+  developer_id: 1
+  university: MyString
+  grade: MyString

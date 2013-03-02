@@ -1,0 +1,34 @@
+<%= form_for(@developer, :url => developers_path(format: 'json'), :html => {:class => 'ajaxform'} ) do |f| %>
+  <% if @developer.errors.any? %>
+  <div id="error_explanation">
+  <h2><%= pluralize(@developer.errors.count, "error") %> prohibited this developer from being saved:</h2>
+
+  <ul>
+    <% @developer.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+  <% end %>
+  </ul>
+</div>
+  <% end %>
+
+<div class="field" validate="name">
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
+<h3>Educations</h3>
+  <%= f.fields_for :educations do |e| %>
+
+    <h5>Education</h5>
+  <div class="field" validate="educations[<%= e.index %>].university">
+  <%= e.label :university %>
+  <%= e.text_field :university %>
+</div>
+<div class="field" validate="educations[<%= e.index %>].grade">
+  <%= e.label :grade %>
+  <%= e.text_field :grade %>
+</div>
+<% end -%>
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>
