@@ -1,5 +1,6 @@
 <h1>Listing developers</h1>
 
+<%= link_to 'New Developer', new_developer_path %>
 <table>
   <thead>
     <tr>
@@ -15,7 +16,7 @@
     <tr>
       <td><%= developer.name %></td>
       <td><%= link_to 'Show', developer %></td>
-      <td><%= link_to 'Destroy', developer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Destroy', developer, method: :delete %></td>
     </tr>
     <% end %>
   </tbody>
@@ -23,4 +24,3 @@
 
 <br />
 
-<%= link_to 'New Developer', new_developer_path %>

@@ -1,11 +1,73 @@
-// Place all the styles related to the developers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.validation-block {
+label {
+  width: 240px;
+  display: block;
+}
+
+ .validation-active {
+  position: relative;
+}
+.validation-active.indicate-error {
+  background-color: #ffe3e3;
+  border: 1px solid #e05c5c;
+  border-radius: 3px;
+}
+.validation-popup {
+  bottom: 8px;
+  color: #fff;
+  font-size: 11px;
+  height: 16px;
+  left: 237px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 16px;
+  visibility: hidden;
+  width: 16px;
+}
+
+select + .validation-popup,textarea + .validation-popup {
+  background: none;
+}
+
+.validation-active input, .validation-active select, .validation-active textarea {
+  background-color: #ffe3e3;
+  border-color: #e05c5c;
+}
+
+.validation-active .validation-popup {
+  opacity: 1;
+  visibility: visible;
+  border-radius: 6px;
+}
+.validation-active:hover .validation-popup {
+  background: #f03333;
+  top: -12px;
+  display: block;
+  height: auto;
+  left: 0;
+  line-height: 16px;
+  max-height: 40px;
+  overflow: visible;
+  padding: 7px 10px;
+  position: absolute;
+  text-indent: 0;
+  width: 240px;
+  z-index: 10;
+  bottom: inherit;
+}
+.indicate-error.validation-active:hover .validation-popup {
+  top: inherit;
+  bottom: 100%;
+}
+.validation-active:hover .validation-popup .arrow {
+  background: image-url('validation-error.png') 0 0 no-repeat;
+  bottom: -7px;
+  height: 7px;
+  position: absolute;
+  width: 7px;
+}
+
+.validation-message.inline {
   color: red;
 }
 
-label {
-  width: 150px;
-  display: block;
-}

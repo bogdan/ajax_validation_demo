@@ -67,3 +67,22 @@ div {
     list-style: square;
   }
 }
+
+
+input {
+  background: #fff;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  padding: 6px 8px;
+  width: 240px;
+  border-radius: 2px;
+}
+input[type=submit] {
+
+  background: #fff;
+  border: 1px solid black;
+  font-size: 12px;
+  padding: 6px 8px;
+  width: 258px;
+  border-radius: 2px;
+}

@@ -16,5 +16,6 @@
 //= require_tree .
 
 $(function() {
-  $('.ajaxform').ajaxForm()
-})
+  $.errors.format ='<div class="validation-popup"><div class="validation-message"></div><div class="arrow"></div></div>';
+  $('.ajaxform').ajaxForm();
+});

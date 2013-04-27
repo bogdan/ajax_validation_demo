@@ -11,15 +11,23 @@
 </div>
   <% end %>
 
-<div class="field" validate="name">
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<div class="field" validate="first_name">
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+</div>
+<div class="field" validate="last_name">
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+</div>
+<div class="field" validate="language">
+  <%= f.label :language, "Favorite language" %>
+  <%= f.text_field :language %>
 </div>
 <h3>Educations</h3>
-  <%= f.fields_for :educations do |e| %>
+<%= f.fields_for :educations do |e| %>
 
-    <h5>Education</h5>
-  <div class="field" validate="educations[<%= e.index %>].university">
+  <h5>Education</h5>
+<div class="field" validate="educations[<%= e.index %>].university">
   <%= e.label :university %>
   <%= e.text_field :university %>
 </div>

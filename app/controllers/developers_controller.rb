@@ -15,7 +15,7 @@ class DevelopersController < ApplicationController
   # GET /developers/new
   def new
     @developer = Developer.new
-    3.times do
+    2.times do
       @developer.educations.build
     end
   end
