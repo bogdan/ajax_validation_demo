@@ -30,7 +30,7 @@ class DevelopersController < ApplicationController
     @developer = Developer.new(developer_params)
 
     if @developer.save
-      render json: {redirect: developer_path(@developer)}
+      render json: {redirect: developers_path }
     else
       render json: {errors: @developer.errors}
     end

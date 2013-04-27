@@ -15,7 +15,9 @@
 //= require turbolinks
 //= require_tree .
 
-$(function() {
+$(document).ready(function(){
+  console.log('zz');
   $.errors.format ='<div class="validation-popup"><div class="validation-message"></div><div class="arrow"></div></div>';
+  console.log($('.ajaxform'));
   $('.ajaxform').ajaxForm();
 });
