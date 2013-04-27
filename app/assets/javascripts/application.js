@@ -12,12 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 $(document).ready(function(){
-  console.log('zz');
   $.errors.format ='<div class="validation-popup"><div class="validation-message"></div><div class="arrow"></div></div>';
-  console.log($('.ajaxform'));
-  $('.ajaxform').ajaxForm();
+  setTimeout(function() {
+    $('.ajaxform').ajaxForm();   
+    console.log($('.ajaxform'));
+    console.log('zz');
+  }, 500);
 });
